@@ -16,18 +16,18 @@ public class Main {
         boolean g = false;
 
 
-        float z = 78.2f;
-        float q = 82.7f;
+        float firstBoxerWeight = 78.2f;
+        float secondBoxerWeght = 82.7f;
 
-        System.out.println("Общий вес" + (z + q));
-        System.out.println("Разница в весе" + Math.abs(z - q));
+        System.out.println("Общий вес" + (firstBoxerWeight + secondBoxerWeght));
+        System.out.println("Разница в весе" + Math.abs(firstBoxerWeight - secondBoxerWeght));
 
 
         int bananaWeight = 80;
         int bananaAmount = 5;
 
-        int milkWeight = 105;
-        int milkAmount = 2;
+        int milkWeightPer100Ml = 105;
+        int milkVolumeMl = 200;
 
         int iceWeight = 100;
         int iceAmount = 2;
@@ -36,12 +36,12 @@ public class Main {
         int eggAmount = 4;
 
         int result = bananaWeight * bananaAmount +
-                milkWeight * milkAmount + iceWeight * iceAmount
+                milkWeightPer100Ml * (milkVolumeMl/100) + iceWeight * iceAmount
                 + eggWeight * eggAmount;
 
         System.out.println("Вес коктейля в граммах" + result);
 
-        float resultInKg = result / 1000;
+        float resultInKg = (float) result / 1000;
         System.out.println("Вес коктейля в килограммах" + resultInKg);
 
 
@@ -73,13 +73,16 @@ public class Main {
         float kristinaZp = 76_230;
 
         float mashaNewZp = mashaZp + (mashaZp * 0.1);
-        float mashaRaznicaZp = mashaNewZp - mashaZp;
+        double mashaNewZpInYear = (mashaZp + (mashaZp * 0.1)) * 12;
+        float mashaRaznicaZp = mashaNewZp - mashaZp * 12;
 
         float denisNewZp = denisZp + (denisZp * 0.1);
-        float denisRaznicaZp = denisNewZp - denisZp;
+        double denisNewZpInYear = (denisZp + (denisZp * 0.1)) * 12;
+        float denisRaznicaZp = denisNewZp - denisZp * 12;
 
         float kristinaNewZp = kristinaZp + (kristinaZp * 0.1);
-        float kristinaRaznicaZp = kristinaNewZp - kristinaZp;
+        double kristinaNewZpInYear = (kristinaZp + (kristinaZp * 0.1)) * 12;
+        float kristinaRaznicaZp = kristinaNewZp - kristinaZp * 12;
 
         System.out.println("Маша теперь получает" + mashaNewZp + "." +
                 "Годовой доход вырос на" + mashaRaznicaZp + "рублей.");
