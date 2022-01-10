@@ -68,28 +68,30 @@ public class Main {
 
 
 
-        float mashaZp = 67_760;
-        float denisZp = 83_690;
-        float kristinaZp = 76_230;
+        float mashaSalary = 67_760;
+        float denisSalary = 83_690;
+        float kristinaSalary = 76_230;
 
-        float mashaNewZp = mashaZp + (mashaZp * 0.1);
-        double mashaNewZpInYear = (mashaZp + (mashaZp * 0.1)) * 12;
-        float mashaRaznicaZp = mashaNewZp - mashaZp * 12;
+        int increasePersent = 10;
 
-        float denisNewZp = denisZp + (denisZp * 0.1);
-        double denisNewZpInYear = (denisZp + (denisZp * 0.1)) * 12;
-        float denisRaznicaZp = denisNewZp - denisZp * 12;
+        float mashaNewSalary = mashaSalary * (1 + increasePersent/100f);
+        double mashaNewSalaryInYear = mashaNewSalary * 12;
+        float mashaRaznicaSalary = mashaNewSalaryInYear - mashaSalary * 12;
 
-        float kristinaNewZp = kristinaZp + (kristinaZp * 0.1);
-        double kristinaNewZpInYear = (kristinaZp + (kristinaZp * 0.1)) * 12;
-        float kristinaRaznicaZp = kristinaNewZp - kristinaZp * 12;
+        float denisNewSalary = denisSalary * (1 + increasePersent/100f);
+        double denisNewSalaryInYear = denisNewSalary * 12;
+        float denisRaznicaSalary = denisNewSalaryInYear - denisSalary * 12;
 
-        System.out.println("Маша теперь получает" + mashaNewZp + "." +
-                "Годовой доход вырос на" + mashaRaznicaZp + "рублей.");
-        System.out.println("Денис теперь получает" + denisNewZp + "." +
-                "Годовой доход вырос на" + denisRaznicaZp + "рублей.");
-        System.out.println("Кристина теперь получает" + kristinaNewZp + "." +
-                "Годовой доход вырос на" + kristinaRaznicaZp + "рублей.");
+        float kristinaNewSalary = kristinaSalary * (1 + increasePersent/100f);
+        double kristinaNewSalaryInYear = kristinaNewSalary * 12;
+        float kristinaRaznicaSalary = kristinaNewSalaryInYear - kristinaSalary * 12;
+
+        System.out.println("Маша теперь получает" + mashaNewSalary + "." +
+                "Годовой доход вырос на" + mashaRaznicaSalary + "рублей.");
+        System.out.println("Денис теперь получает" + denisNewSalary + "." +
+                "Годовой доход вырос на" + denisRaznicaSalary + "рублей.");
+        System.out.println("Кристина теперь получает" + kristinaNewSalary + "." +
+                "Годовой доход вырос на" + kristinaRaznicaSalary + "рублей.");
 
 
 
